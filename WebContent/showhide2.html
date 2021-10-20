@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>How to create the Tabs in HMTL CSS and JS</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sh.css">
+    <link rel="stylesheet" href="jsp2.css">
+    <script type="text/javascript">
+        function checkcreate() {
+            var accno = document.getElementById("accno").value;
+            if (accno > 1000) {
+                var accbal = document.getElementById("accbal").value;
+                if (accbal >= 1000) {
+                    document.getElementById("myform").submit;
+                    return true;
+                } else {
+                    document.getElementById("lowamt").innerHTML = "First Deposit Minimum 1000 Rs.";
+                    return false;
+                }
+            } else {
+                document.getElementById("lowamt").innerHTML = "Enter Account Number Minimum 4 Digit & Greater Than 1000";
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <a href="dashboard.jsp"><button class="btn">Dashboard</button></a>
+    <br>
+    <h2 style="text-align: center;background-color: aquamarine;width: 300px;margin: auto;color: white">Welcome To Banking</h2>
+    <div class="wrapper">
+        <div class="tabs">
+            <ul>
+                <li class="active">
+                    <span class="text">Create Account</span>
+                </li>
+                <li>
+                    <span class="text">Deposit Amount</span>
+                </li>
+                <li>
+                    <span class="text">Withdrawl Amount</span>
+                </li>
+                <li>
+                    <span class="text">Delete Account</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="tab_wrap" style="display: block;">
+                <div class="title">Create Account</div>
+                <div class="tab_content">
+                    <form onsubmit="return checkcreate()" action="AccountController" method="post" id="myform">
+                        <table>
+                            <tr>
+                                <td><input type="text" value="" name="uname" readonly="readonly"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" name="accno" id="accno" placeholder="Account Number" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" name="accbal" id="accbal" placeholder="Account Balance" required></td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn" id="create">Create Account</button></td>
+                            </tr>
+                        </table>
+                    </form>
+                    <p class="invalid" id="lowamt"></p>
+                    <br><br>
+                </div>
+            </div>
+            <div class="tab_wrap" style="display: none;">
+                <div class="title">Deposit Amount</div>
+                <div class="tab_content">
+                    <form onsubmit="return checkdeposit()" action="Depositcontroller" method="post" id="depositform">
+                        <table>
+                            <tr>
+                                <!-- <td><input type="text" value="<%out.print(uname);%>" name="uname" readonly="readonly"></td> -->
+                            </tr>
+                            <tr>
+                                <td><input type="number" name="damt" id="amt" placeholder="Deposit Amount" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="password" name="pass" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                        required></td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn" id="deposit">Deposit Amount</button></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <div class="tab_wrap" style="display: none;">
+                <div class="title">Phone</div>
+                <div class="tab_content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga
+                        eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi
+                        quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus,
+                        ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+                </div>
+            </div>
+            <div class="tab_wrap" style="display: none;">
+                <div class="title">Smart Phone</div>
+                <div class="tab_content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga
+                        eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi
+                        quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus,
+                        ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="sh.js"></script>
+</body>
+
+</html>

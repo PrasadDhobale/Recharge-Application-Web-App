@@ -1,0 +1,184 @@
+body {
+    font-weight: bold;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Orelega One', cursive;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.header {
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.welcome,
+h2 {
+    text-align: center;
+    margin: auto;
+    color: #ffffff;
+    width: 500px;
+    background-color: aqua;
+    border-radius: 20px;
+}
+
+tr,
+th,
+td {
+    color: purple;
+    text-align: center;
+    border-radius: 20px;
+    background-color: white;
+    padding: 5px;
+    margin: auto;
+}
+
+select {
+    border: 5px solid aquamarine;
+    width: 170px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align-last: center;
+    outline: none;
+    color: purple;
+    font-weight: bold;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    margin: auto;
+}
+
+input {
+    border-radius: 50px;
+    text-align: center;
+    padding: 10px 10px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    width: 150px;
+    color: purple;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+form ::placeholder {
+    color: purple;
+}
+
+.topright {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.btn {
+    background-color: aqua;
+    border: 5px solid white;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 200px;
+    cursor: pointer;
+    color: purple;
+    transition: 1s;
+}
+
+.btn:hover {
+    background-color: #00ff8c;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.btncenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: purple;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.invalid {
+    color: #ff0015;
+    text-align: center;
+    background-color: white;
+    border-radius: 500px;
+    width: 500px;
+    margin: auto;
+}
+
+.success {
+    color: green;
+    text-align: center;
+    background-color: white;
+    border-radius: 50px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+}
+
+.searchbtn {
+    width: 100px;
+    background-color: aqua;
+    border: 5px solid #00ff80;
+    padding: 5px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: purple;
+    font-size: 15px;
+    cursor: pointer;
+}
+ form .center{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: auto;
+  	margin-left: auto;
+}
+.already {
+    width: 500px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    h2,.welcome {
+        width: 100%;
+    }
+    .already,
+    .invalid,
+    .success {
+        width: 65%;
+    }
+}

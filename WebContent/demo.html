@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jsp2.css">
+    <title>Recharge</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <a href="dashboard.jsp"><button class="btn">Dashboard</button></a>
+    <br><br><br>
+    <h2 style="text-align: center;background-color: aquamarine;width: 300px;margin: auto;color: white">Mobile Recharge</h2>
+    <br><br>
+    <form action="Rechargecontroller" method="POST" style="margin: auto;">
+
+        <input type="text" name="mn" onkeypress="return event.charCode >= 48 && event.charCode <= 57" minlength="10" maxlength="10" placeholder="Mobile Number" required />
+        <select class="sp" name="sp">
+            <option value="airtel" selected>Airtel</option>
+            <option value="jio">Jio</option>
+            <option value="vi">VI</option>
+            <option value="bsnl">BSNL</option>
+        </select>
+
+        <select class="" name="circle">
+            <option value="Maharashtra & Goa" selected>Maharashtra & Goa</option>
+            <option value="Gujrat">Gujrat</option>
+            <option value="Panjab">Panjab</option>
+            <option value="Rajasthan">Rajasthan</option>                        
+        </select>
+
+        <input type="number" name="ramt" placeholder="Amount" required>
+
+        <button class="btn" type="submit ">Recharge</button>
+    </form>
+</body>
+
+</html>

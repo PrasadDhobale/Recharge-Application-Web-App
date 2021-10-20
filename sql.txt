@@ -1,0 +1,42 @@
+create table mis1customer(
+ cfname varchar2(100),
+ clname varchar2(100),
+ age number,
+ gender varchar2(100),
+ mobno varchar2(100),
+ email varchar2(100),
+ username varchar2(100),
+ password varchar2(100),
+ reg_date date
+);
+ 
+
+
+create table mis1account(
+ username varchar2(100),
+ accno number,
+ accbal number(9,2),
+ reg_date date
+);
+
+
+
+
+create table mis1transaction(
+ username varchar2(100),
+ t_amt number(9,2),
+ t_type varchar2(100),
+ t_date date
+)
+
+
+
+
+create table mis1recharge(
+ username varchar2(100),
+ mn varchar2(100),
+ sp varchar2(100),
+ circle varchar2(100),
+ ramt number,
+ r_date date
+)

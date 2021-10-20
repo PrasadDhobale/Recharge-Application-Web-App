@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Customer | Account</title>
+    <link rel="icon" href="ITB2.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="jsp2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            function checkvalidations() {
+                var accno = document.getElementById("accno").value;
+                if (accno > 1000) {
+                    var accbal = document.getElementById("accbal").value;
+                    if (accbal >= 1000) {
+                        document.getElementById("myform").submit;
+                        return true;
+                    } else {
+                        document.getElementById("lowamt").innerHTML = "First Deposit Minimum 1000 Rs.";
+                        return false;
+                    }
+                } else {
+                    document.getElementById("lowamt").innerHTML = "Enter Account Number Minimum 4 Digit & Greater Than 1000";
+                    return false;
+                }
+            }
+        </script>
+
+</head>
+
+<body>
+    <a href="dashboard.jsp"><button class="btn">Dashboard</button></a>
+    <br><br>
+    <h2 style="text-align: center;background-color: aquamarine;width: 300px;margin: auto;color: white">Welcome To Banking</h2>
+    <br><br>
+    <form onsubmit="return checkvalidations()" action="AccountController" method="post" id="myform">
+        <table>
+            <tr>
+                <td><input type="text" value="" name="uname" readonly="readonly"></td>
+            </tr>
+            <tr>
+                <td><input type="number" name="accno" id="accno" placeholder="Account Number" required></td>
+            </tr>
+            <tr>
+                <td><input type="number" name="accbal" id="accbal" placeholder="Account Balance" required></td>
+            </tr>
+            <tr>
+                <td><button class="btn" id="create">Create Account</button></td>
+            <tr>
+        </table>
+    </form>
+    <p class="invalid" id="lowamt"></p>
+    <br><br>
+</body>
+</html>
